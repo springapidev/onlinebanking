@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml"
+      xmlns:f = "http://java.sun.com/jsf/core"
+      xmlns:h = "http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:ng="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Test....</title>
+    <style>
+        body {font-size:12px; }
+    </style>
+</h:head>
+<h:body>
+    <h:form>
+        <p:panel header="What do you see here?" >
+            <div style="height:50px">
+                This is a simple PrimeFaces 6.1 project running on Spring Boot 2.1.10
+            </div>
+        </p:panel>
+        <p:panel header="JSF 2.2 Bean Access">
+            #{roleController.hello()}
+        </p:panel>
+    </h:form>
+
+    <p:dataTable var="role" value="#{roleController.roleList}">
+        <p:column headerText="Id">
+            <h:outputText value="#{role.id}" />
+        </p:column>
+
+        <p:column headerText="Role Name">
+            <h:outputText value="#{role.roleName}" />
+        </p:column>
+
+
+    </p:dataTable>
+
+</h:body>
+</html>
