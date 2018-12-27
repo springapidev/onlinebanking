@@ -1,41 +1,101 @@
 <!DOCTYPE html>
-<html xmlns = "http://www.w3.org/1999/xhtml"
-      xmlns:f = "http://java.sun.com/jsf/core"
-      xmlns:h = "http://java.sun.com/jsf/html"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:ng="http://xmlns.jcp.org/jsf/passthrough"
-      xmlns:p="http://primefaces.org/ui">
-<h:head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Test....</title>
-    <style>
-        body {font-size:12px; }
-    </style>
-</h:head>
-<h:body>
-    <h:form>
-        <p:panel header="What do you see here?" >
-            <div style="height:50px">
-                This is a simple PrimeFaces 6.1 project running on Spring Boot 2.1.10
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+<head>
+    <title>Home</title>
+</head>
+<body>
+<div layout:fragment="custom-content">
+    <div class="row">
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-warning text-white">
+                <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">Weekly Sales</h4>
+                    <h2 class="font-weight-normal mb-5">$ 15,00000.00</h2>
+                    <p class="card-text">Incresed by 60%</p>
+                </div>
             </div>
-        </p:panel>
-        <p:panel header="JSF 2.2 Bean Access">
-            ${roleController.hello()}
-        </p:panel>
-    </h:form>
+        </div>
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-info text-white">
+                <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">Weekly Orders</h4>
+                    <h2 class="font-weight-normal mb-5">45633456</h2>
+                    <p class="card-text">Decreased by 10%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-success text-white">
+                <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">Visitors Online</h4>
+                    <h2 class="font-weight-normal mb-5">955741235</h2>
+                    <p class="card-text">Increased by 5%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-warning text-white">
+                <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">Weekly Sales</h4>
+                    <h2 class="font-weight-normal mb-5">$ 15,00000.00</h2>
+                    <p class="card-text">Incresed by 60%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-info text-white">
+                <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">Weekly Orders</h4>
+                    <h2 class="font-weight-normal mb-5">45633456</h2>
+                    <p class="card-text">Decreased by 10%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-success text-white">
+                <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">Visitors Online</h4>
+                    <h2 class="font-weight-normal mb-5">955741235</h2>
+                    <p class="card-text">Increased by 5%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-warning text-white">
+                <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">Weekly Sales</h4>
+                    <h2 class="font-weight-normal mb-5">$ 15,00000.00</h2>
+                    <p class="card-text">Incresed by 60%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-info text-white">
+                <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">Weekly Orders</h4>
+                    <h2 class="font-weight-normal mb-5">45633456</h2>
+                    <p class="card-text">Decreased by 10%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-success text-white">
+                <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">Visitors Online</h4>
+                    <h2 class="font-weight-normal mb-5">955741235</h2>
+                    <p class="card-text">Increased by 5%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <p:dataTable var="role" value="#{roleController.roleList}">
-        <p:column headerText="Id">
-            <h:outputText value="#{role.id}" />
-        </p:column>
-
-        <p:column headerText="Role Name">
-            <h:outputText value="#{role.roleName}" />
-        </p:column>
-
-
-    </p:dataTable>
-
-</h:body>
+</body>
 </html>
