@@ -4,7 +4,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout2.html}">
 
 <head>
-    <title>Role Create</title>
+    <title>Account Type Create</title>
 </head>
 <body>
 <div layout:fragment="custom-content">
@@ -14,15 +14,15 @@
         <div class="col-12 stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Add New Role</h4>
+                    <h4 class="card-title">Add New Account Type</h4>
 
                     <form class="forms-sample" th:object="${obj}" method="post"
-                          th:action="@{/role/create.jsf}">
+                          th:action="@{/account-type/create.jsf}">
                         <div class="form-group row">
-                            <label for="rolename" class="col-sm-3 col-form-label">Role Name</label>
+                            <label for="typeName" class="col-sm-3 col-form-label">Account Type</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="rolename" th:field="*{rolename}"
-                                       required  placeholder="Enter Role Name">
+                                <input type="text" class="form-control" id="typeName" th:field="*{typeName}"
+                                       required  placeholder="Enter Account Type Name">
 
                             </div>
                         </div>
