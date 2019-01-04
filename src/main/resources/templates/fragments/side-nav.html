@@ -9,7 +9,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/" th:href="@{/}">
                         <span class="menu-title">Dashboard</span>
-                        <!--<span class="menu-sub-title">( 2 new updates )</span>-->
+
                         <i class="mdi mdi-home menu-icon"></i>
                     </a>
                 </li>
@@ -57,6 +57,37 @@
                         </ul>
                     </div>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#trType" aria-expanded="false" aria-controls="trType">
+                        <span class="menu-title">Tr. Type</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="trType">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/tr-type/create.jsf}" href="/tr-type/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/tr-type/list.jsf}" href="/tr-type/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" data-toggle="collapse" href="#trs" aria-expanded="false" aria-controls="trs">-->
+                        <!--<span class="menu-title">Transaction</span>-->
+                        <!--<i class="menu-arrow"></i>-->
+                        <!--<i class="mdi mdi-crosshairs-gps menu-icon"></i>-->
+                    <!--</a>-->
+                    <!--<div class="collapse" id="trs">-->
+                        <!--<ul class="nav flex-column sub-menu">-->
+                            <!--<li class="nav-item"> <a class="nav-link" th:href="@{/tr.jsf}" href="/tr.jsf">Deposit-Widthdrew</a></li>-->
+
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</li>-->
 
             </ul>
 

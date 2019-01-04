@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout2.html}">
+
+<head>
+    <title>Tranasction Create</title>
+</head>
+<body>
+<div layout:fragment="custom-content">
+    <div class="row">
+
+
+        <div class="col-12 stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Add New Transaction</h4>
+
+                    <form class="forms-sample" th:object="${accountinfo}" method="get"
+                          th:action="@{/tr-info.jsf}">
+                        <div class="form-group row">
+                            <label for="accountNumber" class="col-sm-3 col-form-label">Account No</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="accountNumber" th:field="*{accountNumber}"
+                                       required  placeholder="Enter accountNumber No">
+                            </div>
+                        </div>
+                        <button class="btn btn-success mr-2 float-right">Search</button>
+                    </form>
+
+                    <form class="forms-sample" th:object="${obj}" method="post"
+                          th:action="@{/tr.jsf}">
+
+
+                        <div class="form-group row">
+                            <label for="account" class="col-sm-3 col-form-label">Account No</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="account" th:field="*{account}"
+                                       required  placeholder="Enter Mobile No">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="accountHolderName" class="col-sm-3 col-form-label">Account Type</label>
+                            <div class="col-sm-9">
+                             <select th:field="*{transactionType}">
+                                 <option th:each="tyyy : ${trTypelist}" th:value="${tyyy.id}"><span th:text="${tyyy.typeName}"></span></option>
+                             </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                        <label for="accountHolderName" class="col-sm-3 col-form-label">Amount</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="accountHolderName"  th:field="*{amount}"
+                                   required  placeholder="Enter nominee Name">
+
+                        </div>
+                    </div>
+                        <button class="btn btn-success mr-2 float-right">Submit</button>
+                        <button type="submit" class="btn btn-light mr-2 float-right">Reset</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

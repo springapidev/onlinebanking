@@ -103,10 +103,10 @@ public class HomeController {
         roles.add(role2);
         user.setRoles(roles);
         user.setUserName("admin");
-        user.setFirstName("Rajaul");
-        user.setLastName("Islam");
+        user.setFirstName("Rojina");
+        user.setLastName("Akter");
         user.setPassword(passwordEncoder.encode("12345678"));
-        user.setEmail("rajaul.cse@gmail.com");
+        user.setEmail("rojina.cse@gmail.com");
         user.setMobile("01686239146");
         user.setJoiningDate(new Date());
         user.setActivated(true);

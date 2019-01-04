@@ -4,7 +4,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout2.html}">
 
 <head>
-    <title>Account Info List</title>
+    <title>Transaction List</title>
 </head>
 <body>
 <div layout:fragment="custom-content">
@@ -13,25 +13,15 @@
             <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
                 <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Ac/No</th>
-                    <th>Mobile</th>
-                    <th>NID</th>
-                    <th>Date Of Birth</th>
-                    <th>Gender</th>
-                    <th>Account Type</th>
+                    <th>Transaction Type</th>
+
 
                 </tr>
                 </thead>
                 <tbody>
                 <tr th:each="data : ${list}">
-                    <td th:text="${data.accountHolderName}"> Account Type</td>
-                    <td th:text="${data.accountNumber}"> Account Type</td>
-                    <td th:text="${data.mobile}"> Account Type</td>
-                    <td th:text="${data.nationalId}"> Account Type</td>
-                    <td th:text="${#dates.format(data.bithDate, 'dd-MMM-yyyy')}"> Account Type</td>
-                    <td th:text="${data.gender}"> Account Type</td>
-                    <td th:text="${data.accountType.typeName}"> Account Type</td>
+                    <td th:text="${data.typeName}"> Transaction Type</td>
+
                 </tr>
 
 
